@@ -1,0 +1,6 @@
+section {
+	border-bottom: 4px solid $gray_light;
+	&:last-child {
+		border-bottom: none;
+	}
+}

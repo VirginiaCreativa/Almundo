@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
+import Filtros from "./../../components/Filtros/Filtros.jsx";
 
 class Home extends Component {
   state = {};
@@ -7,7 +8,14 @@ class Home extends Component {
     return (
       <div>
         <Container>
-          <h1>Almundo</h1>
+          <Row>
+            <Col md="4">
+              <Filtros />
+            </Col>
+            <Col md="8">
+              <h2>Hoteles</h2>
+            </Col>
+          </Row>
         </Container>
       </div>
     );
