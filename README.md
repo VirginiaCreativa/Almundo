@@ -6,3 +6,4 @@
 3. Crear carpetas de organización
 4. Valida HEADER
 5. Valida Decoración de Filtros
+6. Demoré porque SVG habia una problema, no se deja cambiar el color, solución webpack, ya aprendí aprendiendo. Si funciona.

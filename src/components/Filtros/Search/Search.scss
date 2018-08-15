@@ -1,3 +1,22 @@
 .SpaceBox {
-	padding: 10px 20px;
+	padding: 10px;
+}
+.Heading {
+	color: $blue_light !important;
+	i, p {
+		display: inline-block;
+	}
+	p {
+		font-weight: 600;
+		margin-bottom: 0;
+		font-style: 0.75em;
+	}
+	.iconSearch {
+		height: 14px;
+		width: 14px;
+		margin-right: 8px;
+		display: inline-block;
+		background: url(./assets/icons/filters/search.svg?fill=#{$blue_light});
+	}
+
 }

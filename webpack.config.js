@@ -61,30 +61,30 @@ module.exports = {
 				test:   /\.css$/,
 				use: [
 					devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-		        	{
-		        		loader: "css-loader",
-							options: { 
-	        				modules: true,
-	        				minimize: true, 
-	        				localIdentName: '[name]_[local]_[hash:base64:5]'
-		        		}
-		        	},
-	        	]
+        	{
+        		loader: "css-loader",
+						options: { 
+      				modules: true,
+      				minimize: true, 
+      				importLoaders: 2,
+      				localIdentName: '[name]_[local]_[hash:base64:5]'
+        		}
+        	},
+        ]
 			},
 			{
 				test: /\.scss$/,
 				use: [
 					devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-		        	{
-		        		loader: "css-loader",
-		        		options: { 
-			        		modules: true, 
-	                  sourceMap: true,
-	                  importLoaders: 1,
-	                  localIdentName: '[name]_[local]_[hash:base64:5]'
-		        		}
-		        	},
-		        	{
+        	{
+        		loader: "css-loader",
+        		options: { 
+              modules: true,
+              minimize: true, 
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+        		}
+        	},
+        	{
 						loader: 'postcss-loader',
 						options: {
 							plugins: (loader) => {
@@ -99,18 +99,29 @@ module.exports = {
 						}
 					},
         	{
-        		loader: 'resolve-url-loader'
+        		loader: 'resolve-url-loader',
+						options: {
+							keepQuery: true
+						}
         	},
+        	
+        	'svg-transform-loader/encode-query', 
         	{
-        		loader: "sass-loader?sourceMap"
+        		loader: "sass-loader",
+        		options: {
+        			modules: true, 
+        			sourceMap: true,
+        			importLoaders: 2,
+        			localIdentName: '[name]__[local]___[hash:base64:5]'
+        		}
         	},
 					{
-					loader: 'sass-resources-loader',
-					options: {
-						resources: [
-							'./src/style/_variables.scss',
-							'./src/style/_global.scss'
-							]
+						loader: 'sass-resources-loader',
+						options: {
+							resources: [
+								'./src/style/_variables.scss',
+								'./src/style/_global.scss'
+								]
 						}
 					}
 	      ]
@@ -129,7 +140,7 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+				test: /\.svg(\?.*)?$/,
 				use: [
 					{
 						loader: 'file-loader',
@@ -138,6 +149,9 @@ module.exports = {
 							name: '[sha512:hash:base64:10].[ext]',
 							context: './assets/images'
 						}
+					},
+					{
+						loader: 'svg-transform-loader'
 					}
 				]
 			},
@@ -145,14 +159,14 @@ module.exports = {
 				test: /\.(woff|woff2|png|jpe?g|gif|ico|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
 				loader: "url-loader?limit=80000"
 			},
-      	{
-      		test: /\.(woff|woff2|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-      		loader: 'file-loader',
-      		options: {
+    	{
+    		test: /\.(woff|woff2|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+    		loader: 'file-loader',
+    		options: {
 					outputPath: 'assets/fonts/',
 					name: '[sha512:hash:base64:10].[ext]'
 				}
-      	}
+    	}
 		]
 	},
 	plugins: [
@@ -190,24 +204,24 @@ module.exports = {
 			'$': 'jquery'
     	}),
 		new BrowserSyncPlugin({
-	      host: 'localhost',
-	      files: [
-	        './**/*.html',
-	        './*.html',
-	        './**/*.js',
-	        './**/**/*.js',
-	        './**/**/**/*.js',
-	        './*.js',
-	        './**/*.scss',
-	        './**/**/*.scss',
-	        './**/**/**/*.scss',
-	        './*.scss',
-	        './**/*.css',
-	        './*.css'
-	      ],
-	      port: 3000,
-	      open: false,
-	      server: { baseDir: ['dist'] }
-    	}),
-   ]
+      host: 'localhost',
+      files: [
+        './**/*.html',
+        './*.html',
+        './**/*.js',
+        './**/**/*.js',
+        './**/**/**/*.js',
+        './*.js',
+        './**/*.scss',
+        './**/**/*.scss',
+        './**/**/**/*.scss',
+        './*.scss',
+        './**/*.css',
+        './*.css'
+      ],
+      port: 3000,
+      open: false,
+      server: { baseDir: ['dist'] }
+  	}),
+  ]
 };
