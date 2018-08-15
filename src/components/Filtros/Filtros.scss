@@ -1,6 +1,14 @@
-section {
-	border-bottom: 4px solid $gray_light;
-	&:last-child {
-		border-bottom: none;
+.Widget {
+	h5 {
+		margin-bottom: 0;
 	}
+	.SpaceBox {
+		padding: 10px 20px;
+	}
+}
+.Line {
+	height: 5px;
+	width: 100%;
+	display: block;
+	box-shadow: inset 0px -1px 5px 0px rgba(0,0,0,0.12);
 }

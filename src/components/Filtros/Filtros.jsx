@@ -8,15 +8,17 @@ import Backgrop from "./../UI/Backgrop.jsx";
 const filtros = props => (
   <div>
     <Backgrop>
-      <section>
-        <h5>Filtros</h5>
-      </section>
-      <section>
+      <div className={classes.Widget}>
+        <h5 className={classes.SpaceBox}>Filtros</h5>
+        <div className={classes.Line} />
+      </div>
+      <div className={classes.Widget}>
         <Search />
-      </section>
-      <section>
+        <div className={classes.Line} />
+      </div>
+      <div>
         <Stars />
-      </section>
+      </div>
     </Backgrop>
   </div>
 );
