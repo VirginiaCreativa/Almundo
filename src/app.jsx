@@ -1,6 +1,14 @@
-import React from "react";
-import ReactDOM, { render } from "react-dom";
-import Home from "./containers/Home";
+import React, { Component } from "react";
+import { Container, Row, Col } from "reactstrap";
+import Home from "./containers/Home/Home.jsx";
 
-const app = document.getElementById("app");
-render(<Home />, app);
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Home />
+      </div>
+    );
+  }
+}
+export default App;

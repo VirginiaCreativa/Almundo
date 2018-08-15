@@ -1,2 +1,6 @@
-const suma = (a, b) => a + b;
-console.log(suma(3, 8));
+import React from "react";
+import ReactDOM, { render } from "react-dom";
+import App from "./app.jsx";
+
+const app = document.getElementById("app");
+render(<App />, app);

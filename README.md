@@ -1,5 +1,6 @@
 # Almundo
 ### Laboral para pruebas en YAHS
 
-* Añadir archivos de Webpack, ya lo hice organización y queda bien.
-* Añadir fotos, logo, iconos y data
+1. Añadir archivos de Webpack, ya lo hice organización y queda bien.
+2. Añadir fotos, logo, iconos y data
+3. Crear carpetas

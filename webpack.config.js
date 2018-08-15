@@ -147,7 +147,7 @@ module.exports = {
 			template: __dirname + '/src/index.html',
 			filename: 'index.html',
 			inject: 'body',
-			title: 'Burger Builder',
+			title: 'Almundo',
 			minify: {
 				collapseWhitespace: true
 			}
