@@ -135,6 +135,7 @@ module.exports = {
 						loader: 'file-loader',
 						options: {
 							outputPath: 'assets/images',
+							name: '[sha512:hash:base64:10].[ext]',
 							context: './assets/images'
 						}
 					}
@@ -151,7 +152,7 @@ module.exports = {
 					outputPath: 'assets/fonts/',
 					name: '[sha512:hash:base64:10].[ext]'
 				}
-      	}, 
+      	}
 		]
 	},
 	plugins: [
