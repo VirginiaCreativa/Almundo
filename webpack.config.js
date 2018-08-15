@@ -9,8 +9,8 @@ const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
 	entry: {
-		index: './src/index.jsx',
-		app: './src/app.jsx',
+		index: './src/index.js',
+		app: './src/app.js',
 		imports: './src/scripts/imports.js'
 	},
 	watch: true,
@@ -54,7 +54,7 @@ module.exports = {
 			},
 			{
 				test: /\.(js|jsx)$/,
-				exclude: /(node_modules|bower_components)/,
+				exclude: /node_modules/,
 				loader: 'babel-loader'
 			},
 			{
@@ -80,7 +80,7 @@ module.exports = {
 		        		options: { 
 			        		modules: true, 
 	                  sourceMap: true,
-	                  importLoaders: 2,
+	                  importLoaders: 1,
 	                  localIdentName: '[name]_[local]_[hash:base64:5]'
 		        		}
 		        	},
@@ -116,29 +116,42 @@ module.exports = {
 	      ]
 			},
 			{
-				test: /\.(png|svg|jpe?g|gif|ico)$/,
+				test: /\.(png|jpe?g|gif|ico)$/,
 				use: [
 					{
 						loader: 'file-loader',
 						options: {
 							outputPath: 'assets/images',
-							name: '[sha512:hash:base64:10].[ext]'
+							name: '[sha512:hash:base64:10].[ext]',
+							context: './assets/images'
 						}
 					}
 				]
 			},
 			{
-				test: /\.(woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+				test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							outputPath: 'assets/images',
+							context: './assets/images'
+						}
+					}
+				]
+			},
+			{
+				test: /\.(woff|woff2|png|jpe?g|gif|ico|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
 				loader: "url-loader?limit=80000"
 			},
       	{
-      		test: /\.(woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+      		test: /\.(woff|woff2|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
       		loader: 'file-loader',
       		options: {
 					outputPath: 'assets/fonts/',
 					name: '[sha512:hash:base64:10].[ext]'
 				}
-      	}
+      	}, 
 		]
 	},
 	plugins: [

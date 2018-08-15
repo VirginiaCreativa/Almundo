@@ -3,4 +3,4 @@
 
 1. Añadir archivos de Webpack, ya lo hice organización y queda bien.
 2. Añadir fotos, logo, iconos y data
-3. Crear carpetas
+3. Crear carpetas de organización
