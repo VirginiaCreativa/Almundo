@@ -1,8 +1,7 @@
-.SpaceBox {
-	padding: 10px;
-}
+
 .Search {
 	position: relative;
+	margin: 10px 0;
 	.Heading {
 		color: $blue_light !important;
 		i, p {
@@ -51,5 +50,15 @@
 			border-color: transparent transparent $oragen transparent;
 		}
 	}
-
+	form {
+		margin-top: 12px;
+		input[type='text']{
+			border-radius: 2px;
+		}
+		button {
+			background-color: $blue_dark;
+			border: none;
+			border-radius: 0;
+		}
+	}
 }

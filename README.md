@@ -7,3 +7,4 @@
 4. Valida HEADER
 5. Valida Decoración de Filtros
 6. Demoré porque SVG habia una problema, no se deja cambiar el color, solución webpack, ya aprendí aprendiendo. Si funciona.
+7. Valida Decoración de Search
