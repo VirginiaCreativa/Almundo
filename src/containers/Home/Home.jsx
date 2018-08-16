@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import Filtros from "./../../components/Filtros/Filtros.jsx";
+import Hoteles from "./../../components/Hoteles/Hoteles.jsx";
+import Data from "./../../assets/data/data.json";
 
 class Home extends Component {
   state = {};
@@ -16,7 +18,7 @@ class Home extends Component {
               <Filtros btnSlided={this.btnSlidedHandler} />
             </Col>
             <Col md="8">
-              <h2>Hoteles</h2>
+              <Hoteles />
             </Col>
           </Row>
         </Container>
