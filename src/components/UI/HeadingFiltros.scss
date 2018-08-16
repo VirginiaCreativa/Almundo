@@ -1,8 +1,7 @@
-
 .Heading {
-	margin : 10px 0;
-	color  : $blue_light !important;
-	
+	position : relative;
+	margin   : 10px 0;
+	color    : $blue_light !important;
 	i, p {
 		display : inline-block;
 	}

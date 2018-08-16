@@ -5,13 +5,15 @@ import HeadingFiltros from "./../../UI/HeadingFiltros.jsx";
 
 const stars = props => {
   return (
-    <div className="Stars">
-      <HeadingFiltros
-        title="Estrella"
-        btnSlided={props.btnSlided}
-        icon="iconStar"
-        typeslider="iconTriangleUp"
-      />
+    <div className={classes.Stars}>
+      <Container>
+        <HeadingFiltros
+          title="Estrella"
+          btnSlided={props.btnSlided}
+          icon="iconStar"
+          typeslider="iconTriangleUp"
+        />
+      </Container>
     </div>
   );
 };
