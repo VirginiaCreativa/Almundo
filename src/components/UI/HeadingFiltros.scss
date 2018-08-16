@@ -1,0 +1,62 @@
+
+.Heading {
+	margin : 10px 0;
+	color  : $blue_light !important;
+	
+	i, p {
+		display : inline-block;
+	}
+	p {
+		margin-bottom : 0;
+		font-size     : 0.875em !important;
+		font-weight   : 600;
+	}
+}
+:global {
+	.iconSearch {
+		position     : relative;
+		display      : inline-block;
+		top          : 2px;
+		height       : 14px;
+		width        : 14px;
+		margin-right : 8px;
+		background: url(./assets/icons/filters/search.svg?fill=#{$blue_light});
+	}
+	.iconStar {
+		position     : relative;
+		display      : inline-block;
+		top          : 2px;
+		height       : 14px;
+		width        : 14px;
+		margin-right : 8px;
+		background: url(./assets/icons/filters/star.svg?fill=#{$blue_light});
+	}
+	.iconTriangleUp {
+		position     : absolute;
+		top          : 12px;
+		right        : 15px;
+		height       : 0px;
+		width        : 0px;
+		cursor       : pointer;
+		border-color : transparent transparent $blue_light transparent;
+		border-style : solid;
+		border-width : 0px 6px 6px 6px;
+		&:hover {
+			border-color : transparent transparent $oragen transparent;
+		}
+	}
+	.iconTriangleDown {
+		position     : absolute;
+		top          : 12px;
+		right        : 15px;
+		height       : 0px;
+		width        : 0px;
+		cursor       : pointer;
+		border-color : $blue_light transparent transparent transparent;;
+		border-style : solid;
+		border-width : 6px 6px 0 6px;
+		&:hover {
+			border-color : transparent transparent $oragen transparent;
+		}
+	}
+}

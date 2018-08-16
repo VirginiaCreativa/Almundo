@@ -4,13 +4,16 @@ import Filtros from "./../../components/Filtros/Filtros.jsx";
 
 class Home extends Component {
   state = {};
+  btnSlidedHandler = () => {
+    console.log("funcionaa");
+  };
   render() {
     return (
       <div>
         <Container>
           <Row>
             <Col md="4">
-              <Filtros />
+              <Filtros btnSlided={this.btnSlidedHandler} />
             </Col>
             <Col md="8">
               <h2>Hoteles</h2>

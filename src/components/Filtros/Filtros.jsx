@@ -17,7 +17,7 @@ const filtros = props => (
         <div className={classes.Line} />
       </div>
       <div>
-        <Stars />
+        <Stars btnSlided={props.btnSlided} />
       </div>
     </Backgrop>
   </div>
