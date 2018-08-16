@@ -4,13 +4,14 @@
 	top          : 2px;
 	height       : 14px;
 	width        : 14px;
-	margin-right : 8px;
+	margin-right : 4px;
 	background: url(./assets/icons/filters/star.svg?fill=#{$yellow});
 }
 form {
-	margin-bottom: 10px;
+	margin-bottom : 6px;
 	label {
-		font-weight: 600;
-		font-size: 0.812em;
+		margin      : 6px 0 !important;
+		font-size   : 0.812em;
+		font-weight : 600;
 	}
 }
