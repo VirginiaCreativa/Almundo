@@ -1,0 +1,16 @@
+.iconCheck {
+	position     : relative;
+	display      : inline-block;
+	top          : 2px;
+	height       : 14px;
+	width        : 14px;
+	margin-right : 8px;
+	background: url(./assets/icons/filters/star.svg?fill=#{$yellow});
+}
+form {
+	margin-bottom: 10px;
+	label {
+		font-weight: 600;
+		font-size: 0.812em;
+	}
+}
