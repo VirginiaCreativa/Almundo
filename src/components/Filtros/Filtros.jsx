@@ -3,11 +3,11 @@ import { Container, Row, Col } from "reactstrap";
 import classes from "./Filtros.scss";
 import Search from "./Search/Search.jsx";
 import Stars from "./Stars/Stars.jsx";
-import Backgrop from "./../UI/Backgrop.jsx";
+import BackgropFiltros from "./../UI/BackgropFiltros.jsx";
 
 const filtros = props => (
   <div>
-    <Backgrop>
+    <BackgropFiltros>
       <div className={classes.Widget}>
         <h5 className={classes.SpaceBox}>Filtros</h5>
         <div className={classes.Line} />
@@ -19,7 +19,7 @@ const filtros = props => (
       <div>
         <Stars btnSlided={props.btnSlided} />
       </div>
-    </Backgrop>
+    </BackgropFiltros>
   </div>
 );
 export default filtros;
