@@ -10,32 +10,36 @@ const hotel = props => {
 
   return (
     <BackgropHotel>
-      <div className={classes.Hotel} />
-      <Row>
-        <Col md="4">
-          <img src={imageSrc} alt={name} className="img-fluid" />
-        </Col>
-        <Col md="5">
-          <div className={classes.Info}>
-            <h3>{name}</h3>
-            <div className={classes.Amenities}>
-              {amenities.map((amenitie, i) => {
-                return <Anemities typeIcon={amenitie} key={i} />;
-              })}
+      <Container>
+        <div className={classes.Hotel} />
+        <Row className="no-gutters">
+          <Col md="5">
+            <div className={classes.imageHotel}>
+              <img src={imageSrc} alt={name} className="img-fluid" />
             </div>
-          </div>
-        </Col>
-        <Col md="3">
-          <div className={classes.Price}>
-            <p>Precio por noche por habitación</p>
-            <h1>
-              <span className={classes.cambio}>ARS</span>
-              {price}
-            </h1>
-            <Button color="primary">Ver hotel</Button>
-          </div>
-        </Col>
-      </Row>
+          </Col>
+          <Col md="4">
+            <div className={classes.Info}>
+              <h6>{name}</h6>
+              <div className={classes.Amenities}>
+                {amenities.map((amenitie, i) => {
+                  return <Anemities typeIcon={amenitie} key={i} />;
+                })}
+              </div>
+            </div>
+          </Col>
+          <Col md="3">
+            <div className={classes.Price}>
+              <p>Precio por noche por habitación</p>
+              <h1>
+                <span className={classes.cambio}>ARS</span>
+                {price}
+              </h1>
+              <Button color="primary">Ver hotel</Button>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </BackgropHotel>
   );
 };
