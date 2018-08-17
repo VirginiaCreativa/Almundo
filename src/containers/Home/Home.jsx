@@ -14,10 +14,10 @@ class Home extends Component {
       <div>
         <Container>
           <Row>
-            <Col md="4">
+            <Col md="3" sm="12" className="d-none d-sm-none d-md-block">
               <Filtros btnSlided={this.btnSlidedHandler} />
             </Col>
-            <Col md="8">
+            <Col md="8" sm="12">
               <Hoteles data={Data} />
             </Col>
           </Row>

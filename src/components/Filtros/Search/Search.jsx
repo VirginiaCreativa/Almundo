@@ -23,8 +23,8 @@ const search = props => {
           typeslider="iconTriangleUp"
         />
         <Form>
-          <Row>
-            <Col md="8">
+          <Row className="no-gutters">
+            <Col md="7">
               <Input
                 type="text"
                 className={classes.InputSearch}
@@ -33,8 +33,10 @@ const search = props => {
                 placeholder="Ingrese el hombre del hotel"
               />
             </Col>
-            <Col md="4">
-              <Button color="primary">Aceptar</Button>
+            <Col md="5">
+              <Button color="primary" className="float-right">
+                Aceptar
+              </Button>
             </Col>
           </Row>
         </Form>

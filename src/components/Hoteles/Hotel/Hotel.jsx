@@ -9,16 +9,15 @@ const hotel = props => {
   let imageSrc = require(`./../../../assets/images/hotels/${image}`);
 
   return (
-    <BackgropHotel>
-      <Container>
-        <div className={classes.Hotel} />
+    <div className={classes.Hotel}>
+      <BackgropHotel>
         <Row className="no-gutters">
-          <Col md="5">
+          <Col md="5" sm="4">
             <div className={classes.imageHotel}>
               <img src={imageSrc} alt={name} className="img-fluid" />
             </div>
           </Col>
-          <Col md="4">
+          <Col md="4" sm="5">
             <div className={classes.Info}>
               <h6>{name}</h6>
               <div className={classes.Amenities}>
@@ -28,7 +27,7 @@ const hotel = props => {
               </div>
             </div>
           </Col>
-          <Col md="3">
+          <Col md="3" sm="3">
             <div className={classes.Price}>
               <p>Precio por noche por habitación</p>
               <h1>
@@ -39,8 +38,8 @@ const hotel = props => {
             </div>
           </Col>
         </Row>
-      </Container>
-    </BackgropHotel>
+      </BackgropHotel>
+    </div>
   );
 };
 
