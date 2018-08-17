@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
+import SliderMobile from "./SliderMobile.jsx";
 import classes from "./FiltrosMobile.scss";
 
 const filtrosMobile = props => {
@@ -17,6 +18,7 @@ const filtrosMobile = props => {
           <h5>Filtrar</h5>
           <i className={classes.iconTriangleDown} onClick={props.btnSlided} />
         </div>
+        <SliderMobile />
       </Container>
     </div>
   );
