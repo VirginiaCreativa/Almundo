@@ -3,9 +3,10 @@ import { Container, Row, Col, Button } from "reactstrap";
 import classes from "./Hotel.scss";
 import BackgropHotel from "./../../UI/BackgropHotel.jsx";
 import Anemities from "./../../UI/Amenities.jsx";
+import StarsPount from "./../../UI/StarsPount.jsx";
 
 const hotel = props => {
-  const { image, name, price, amenities } = props;
+  const { image, name, stars, price, amenities } = props;
   let imageSrc = require(`./../../../assets/images/hotels/${image}`);
 
   return (
@@ -20,6 +21,7 @@ const hotel = props => {
           <Col md="4" sm="5">
             <div className={classes.Info}>
               <h6>{name}</h6>
+              <StarsPount typeStars={stars} />
               <div className={classes.Amenities}>
                 {amenities.map((amenitie, i) => {
                   return <Anemities typeIcon={amenitie} key={i} />;
