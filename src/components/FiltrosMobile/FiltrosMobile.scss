@@ -1,15 +1,14 @@
 .FiltrosMobile {
-	display          : grid;
 	margin-bottom    : 20px;
 	padding          : 10px 0;
 	background-color : #fff;
-	text-align       : center;
-	align-items      : center;
-	justify-content  : center;
 }
 .MenuFiltros {
+	margin: 0 auto;
+	display: table;
 	h5, i {
 		display : inline-block;
+		text-align: center;
 	}
 	h5 {
 		margin-right  : 8px;

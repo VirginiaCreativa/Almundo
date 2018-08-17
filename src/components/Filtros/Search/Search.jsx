@@ -24,7 +24,7 @@ const search = props => {
         />
         <Form>
           <Row className="no-gutters">
-            <Col md="8">
+            <Col md="8" xs="8">
               <Input
                 type="text"
                 className={classes.InputSearch}
@@ -33,7 +33,7 @@ const search = props => {
                 placeholder="Ingrese el hombre del hotel"
               />
             </Col>
-            <Col md="4">
+            <Col md="4" xs="4">
               <Button color="primary" className="float-right">
                 Aceptar
               </Button>
