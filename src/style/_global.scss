@@ -1,10 +1,19 @@
 body {
-	background-color: $gray_light !important;
+	background-color : $gray_light !important;
 }
 button {
-	background-color: $blue_dark !important;
-	border-color: $blue_dark !important;
-	.btn-primary {
-		background-color: $blue_dark !important;
+	background-color : $blue_dark !important;
+	border           : none !important;
+	&:hover, &:active {
+		background-color : $oragen !important;
+		border           : none !important;;
+	}
+}
+.btn-primary{
+	background-color : $blue_dark !important;
+	border           : none !important;
+	&:hover {
+		background-color : $oragen !important;
+		border           : none !important;
 	}
 }
