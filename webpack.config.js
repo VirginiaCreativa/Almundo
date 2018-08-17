@@ -9,8 +9,8 @@ const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
 	entry: {
-		index: './src/index.js',
-		app: './src/app.js',
+		index: './src/index.jsx',
+		app: './src/app.jsx',
 		imports: './src/scripts/imports.js'
 	},
 	watch: true,

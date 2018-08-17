@@ -1,3 +1,4 @@
+
 .Heading {
 	position : relative;
 	margin   : 10px 0;
@@ -30,29 +31,26 @@
 		margin-right : 8px;
 		background: url(./assets/icons/filters/star.svg?fill=#{$blue_light});
 	}
-	.iconTriangleUp {
+	.iconTriangleBase {
 		position     : absolute;
-		top          : 12px;
-		right        : 15px;
+		top          : 9px;
+		right        : 2px;
 		height       : 0px;
 		width        : 0px;
 		cursor       : pointer;
-		border-color : transparent transparent $blue_light transparent;
 		border-style : solid;
+	}
+	.iconTriangleUp {
+		@extend .iconTriangleBase;
+		border-color : transparent transparent $blue_light transparent;
 		border-width : 0px 6px 6px 6px;
 		&:hover {
 			border-color : transparent transparent $oragen transparent;
 		}
 	}
 	.iconTriangleDown {
-		position     : absolute;
-		top          : 12px;
-		right        : 15px;
-		height       : 0px;
-		width        : 0px;
-		cursor       : pointer;
+		@extend .iconTriangleBase;
 		border-color : $blue_light transparent transparent transparent;;
-		border-style : solid;
 		border-width : 6px 6px 0 6px;
 		&:hover {
 			border-color : transparent transparent $oragen transparent;

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
+import classes from "./Home.scss";
 import Filtros from "./../../components/Filtros/Filtros.jsx";
+import FiltrosMobile from "./../../components/FiltrosMobile/FiltrosMobile.jsx";
 import Hoteles from "./../../components/Hoteles/Hoteles.jsx";
 import Data from "./../../assets/data/data.json";
 
@@ -12,6 +14,7 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <FiltrosMobile />
         <Container>
           <Row>
             <Col md="4" sm="12" className="d-none d-sm-none d-md-block">
