@@ -7,14 +7,27 @@ import Hoteles from "./../../components/Hoteles/Hoteles.jsx";
 import Data from "./../../assets/data/data.json";
 
 class Home extends Component {
-  state = {};
-  btnSlidedHandler = () => {
-    console.log("funcionaa");
+  state = {
+    filtros: false,
+    showSlider: true
+  };
+
+  toggleSlideHandler = () => {
+    const doesShow = this.state.filtros;
+    const doesSlider = this.state.showSlider;
+    this.setState({
+      filtros: !doesShow,
+      showSlider: !doesSlider
+    });
   };
   render() {
     return (
       <div>
-        <FiltrosMobile />
+        <FiltrosMobile
+          btnSlided={this.toggleSlideHandler}
+          slidered={this.state.filtros}
+          iconTriangle={this.state.showSlider}
+        />
         <Container>
           <Row>
             <Col md="4" sm="12" className="d-none d-sm-none d-md-block">
