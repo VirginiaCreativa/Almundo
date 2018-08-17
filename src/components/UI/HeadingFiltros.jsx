@@ -6,12 +6,12 @@ import classes from "./HeadingFiltros.scss";
 const headignFiltros = props => (
   <Aux>
     <div className={classes.Heading}>
-      <Row>
-        <Col md="9" xs="6">
+      <Row className="no-gutters">
+        <Col md="10" xs="6">
           <i className={props.icon} />
           <p>{props.title}</p>
         </Col>
-        <Col md="3" xs="6">
+        <Col md="2" xs="6">
           <i className={props.typeslider} onClick={props.btnSlided} />
         </Col>
       </Row>

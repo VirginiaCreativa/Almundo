@@ -1,3 +1,4 @@
+
 .Hotel {
 	min-height    : 175px;
 	margin-bottom : 16px;
@@ -6,11 +7,30 @@
 	overflow : hidden;
 	height   : 175px;
 	width    : 270px;
+	@media (min-width: 720px) and (max-width: 991.98px)  {
+		margin-bottom    : 10px;
+		background-color : #eee;
+	}
+	@media (min-width: 320px) and (max-width: 720px)  {
+		width         : inherit;
+		margin-bottom : 10px;
+	}
+	img {
+		@media (min-width: 720px) and (max-width: 991.98px)  {
+			max-height : 170%;
+		}
+		@media (min-width: 320px) and (max-width: 720px)  {
+			max-height : 155%;
+		}
+	}
 }
 .Info {
 	h6 {
 		font-weight : 600;
 		color       : $blue_light;
+	}
+	@media (min-width: 320px) and (max-width: 991.98px) {
+		margin-bottom : 20px;
 	}
 }
 .Price {
@@ -44,6 +64,19 @@
 			margin-right : 4px;
 			font-size    : 0.625em;
 			font-weight  : 300;
+		}
+	}
+	@media (min-width: 320px) and (max-width: 991.98px)  {
+		padding : 20px 0;
+		.btn {
+			display : block !important;
+			width   : 100% !important;
+		}
+		&:before {
+			top        : 0;
+			height     : 1px;
+			width      : 100%;
+			border-top : 1px dashed #ccc;
 		}
 	}
 }

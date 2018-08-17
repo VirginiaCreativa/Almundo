@@ -13,12 +13,16 @@ const hotel = props => {
     <div className={classes.Hotel}>
       <BackgropHotel>
         <Row className="no-gutters">
-          <Col md="5" sm="4">
+          <Col lg="5" md="12">
             <div className={classes.imageHotel}>
-              <img src={imageSrc} alt={name} className="img-fluid" />
+              <img
+                src={imageSrc}
+                alt={name}
+                className="img-fluid mx-auto d-block"
+              />
             </div>
           </Col>
-          <Col md="4" sm="5">
+          <Col lg="4" md="12">
             <div className={classes.Info}>
               <h6>{name}</h6>
               <StarsPount typeStars={stars} />
@@ -29,14 +33,16 @@ const hotel = props => {
               </div>
             </div>
           </Col>
-          <Col md="3" sm="3">
+          <Col lg="3" md="12">
             <div className={classes.Price}>
               <p>Precio por noche por habitación</p>
               <h1>
                 <span className={classes.cambio}>ARS</span>
                 {price.toFixed(0)}
               </h1>
-              <Button color="primary">Ver hotel</Button>
+              <Button color="primary" block>
+                Ver hotel
+              </Button>
             </div>
           </Col>
         </Row>

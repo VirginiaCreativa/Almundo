@@ -14,7 +14,7 @@ class Home extends Component {
       <div>
         <Container>
           <Row>
-            <Col md="3" sm="12" className="d-none d-sm-none d-md-block">
+            <Col md="4" sm="12" className="d-none d-sm-none d-md-block">
               <Filtros btnSlided={this.btnSlidedHandler} />
             </Col>
             <Col md="8" sm="12">
