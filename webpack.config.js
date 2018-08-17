@@ -156,7 +156,7 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(woff|woff2|png|jpe?g|gif|ico|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+				test: /\.(woff|woff2|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
 				loader: "url-loader?limit=80000"
 			},
     	{

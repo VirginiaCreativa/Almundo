@@ -17,3 +17,4 @@
 5. Valida Decoración de Filtros
 6. Demoré porque SVG habia una problema, no se deja cambiar el color, solución webpack, ya aprendí aprendiendo. Si funciona.
 7. Valida Decoración de Search
+8. Antes hacer prueba en iconos de Anemities y repetir Star para que funcionar https://stackblitz.com/edit/iconsrepeat.

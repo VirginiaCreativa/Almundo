@@ -4,6 +4,13 @@ import classes from "./Hoteles.scss";
 import Hotel from "./Hotel/Hotel.jsx";
 
 const hoteles = props => {
-  return <Hotel />;
+  const hoteles = props.data;
+  return (
+    <div className={classes.Hoteles}>
+      {hoteles.map((hotel, id) => {
+        return <Hotel key={hotel.id} {...hotel} />;
+      })}
+    </div>
+  );
 };
 export default hoteles;

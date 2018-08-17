@@ -1,0 +1,76 @@
+:global {
+	.Icon {
+		display      : inline-block;
+		height       : 14px;
+		width        : 14px;
+		margin-right : 8px;
+	}
+	.bathrobes {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/bathrobes.svg?fill=#{$gray_dark});
+	}
+	.bathtub {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/bathtub.svg?fill=#{$gray_dark});
+	}
+	.beach-pool-facilities {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/beach-pool-facilities.svg?fill=#{$gray_dark});
+	}
+	.beach {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/beach.svg?fill=#{$gray_dark});
+	}
+	.business-center {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/business-center.svg?fill=#{$gray_dark});
+	}
+	.children-club {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/children-club.svg?fill=#{$gray_dark});
+	}
+	.coffe-maker {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/coffe-maker.svg?fill=#{$gray_dark});
+	}
+	.deep-soaking-bathtub {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/deep-soaking-bathtub.svg?fill=#{$gray_dark});
+	}
+	.fitness-center {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/fitness-center.svg?fill=#{$gray_dark});
+	}
+	.garden {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/garden.svg?fill=#{$gray_dark});
+	}
+	.kitchen-facilities {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/kitchen-facilities.svg?fill=#{$gray_dark});
+	}
+	.newspaper {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/newspaper.svg?fill=#{$gray_dark});
+	}
+	.nightclub {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/nightclub.svg?fill=#{$gray_dark});
+	}
+	.restaurant {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/restaurant.svg?fill=#{$gray_dark});
+	}
+	.safety-box {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/safety-box.svg?fill=#{$gray_dark});
+	}
+	.separate-bredroom {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/separate-bredroom.svg?fill=#{$gray_dark});
+	}
+	.sheets {
+		@extend .Icon;
+		background: url(./assets/icons/amenities/sheets.svg?fill=#{$gray_dark});
+	}
+}

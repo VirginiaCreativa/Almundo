@@ -18,7 +18,7 @@ class Home extends Component {
               <Filtros btnSlided={this.btnSlidedHandler} />
             </Col>
             <Col md="8">
-              <Hoteles />
+              <Hoteles data={Data} />
             </Col>
           </Row>
         </Container>
