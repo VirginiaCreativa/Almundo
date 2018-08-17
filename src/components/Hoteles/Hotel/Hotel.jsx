@@ -32,7 +32,7 @@ const hotel = props => {
               <p>Precio por noche por habitación</p>
               <h1>
                 <span className={classes.cambio}>ARS</span>
-                {price}
+                {price.toFixed(0)}
               </h1>
               <Button color="primary">Ver hotel</Button>
             </div>

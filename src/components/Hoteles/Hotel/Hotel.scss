@@ -1,6 +1,7 @@
+
 .Hotel {
-	min-height       : 175px;
-	margin-bottom    : 20px;
+	min-height    : 175px;
+	margin-bottom : 20px;
 }
 .imageHotel {
 	overflow : hidden;
@@ -9,7 +10,41 @@
 }
 .Info {
 	h6 {
-		color: $blue_light;
-		font-weight: 600;
+		font-weight : 600;
+		color       : $blue_light;
+	}
+}
+.Price {
+	position        : relative;
+	display         : grid;
+	padding         : 18px 16px;
+	text-align      : center;
+	align-items     : center;
+	justify-content : center;
+	&:before {
+		content     : '';
+		position    : absolute;
+		display     : block;
+		left        : 0;
+		height      : 170px;
+		width       : 1px;
+		border-left : 1px dashed #ccc;
+	}
+	p {
+		margin-bottom : 4px;
+		font-size     : 0.8125em;
+		color         : $gray_dark;
+	}
+	h1 {
+		display         : flex;
+		font-weight     : 600;
+		color           : $oragen;
+		align-items     : center;
+		justify-content : center;
+		span {
+			margin-right : 4px;
+			font-size    : 0.625em;
+			font-weight  : 300;
+		}
 	}
 }
