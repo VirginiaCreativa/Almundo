@@ -1,17 +1,22 @@
 .iconCheck {
-	position     : relative;
-	display      : inline-block;
-	top          : 2px;
-	height       : 14px;
-	width        : 14px;
-	margin-right : 4px;
-	background: url(./assets/icons/filters/star.svg?fill=#{$yellow});
+  position: relative;
+  display: inline-block;
+  top: 2px;
+  height: 14px;
+  width: 14px;
+  margin-right: 4px;
+  background: url(./assets/icons/filters/star.svg?fill=#{$yellow});
 }
+
 form {
-	margin-bottom : 6px;
-	label {
-		margin      : 6px 0 !important;
-		font-size   : 0.812em;
-		font-weight : 600;
-	}
+  margin-bottom: 6px;
+  label {
+    margin: 6px 0 !important;
+    font-size: 0.812em;
+    font-weight: 600;
+  }
+}
+
+.SliderStars {
+  transition: all .25s ease;
 }

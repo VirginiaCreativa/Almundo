@@ -8,30 +8,40 @@ import Data from "./../../assets/data/data.json";
 
 class Home extends Component {
   state = {
-    filtros: false,
-    showSlider: true
+    filtramobile: false,
+    filtrosearch: false,
+    filtrostars: false
   };
 
-  toggleSlideHandler = () => {
-    const doesShow = this.state.filtros;
-    const doesSlider = this.state.showSlider;
-    this.setState({
-      filtros: !doesShow,
-      showSlider: !doesSlider
-    });
+  toggleFiltrarHandler = () => {
+    const doesShow = this.state.filtramobile;
+    this.setState({ filtramobile: !doesShow });
+  };
+
+  toggleFiltroSearchHandler = () => {
+    const doesShow = this.state.filtrosearch;
+    this.setState({ filtrosearch: !doesShow });
+  };
+  toggleFiltroStarsHandler = () => {
+    const doesShowS = this.state.filtrostars;
+    this.setState({ filtrostars: !doesShowS });
   };
   render() {
     return (
       <div>
         <FiltrosMobile
-          btnSlided={this.toggleSlideHandler}
-          slidered={this.state.filtros}
-          iconTriangle={this.state.showSlider}
+          btnSlided={this.toggleFiltrarHandler}
+          slidered={this.state.filtramobile}
         />
         <Container>
           <Row>
             <Col md="4" sm="12" className="d-none d-sm-none d-md-block">
-              <Filtros btnSlided={this.btnSlidedHandler} />
+              <Filtros
+                btnSearch={this.toggleFiltroSearchHandler}
+                slideredSearch={this.state.filtrosearch}
+                slideredStars={this.state.filtrostars}
+                btnStars={this.toggleFiltroStarsHandler}
+              />
             </Col>
             <Col md="8" sm="12">
               <Hoteles data={Data} />
