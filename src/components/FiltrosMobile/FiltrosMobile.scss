@@ -1,44 +1,27 @@
+
 .FiltrosMobile {
-	margin-bottom    : 20px;
+	position         : relative;
 	padding          : 10px 0;
 	background-color : #fff;
 }
 .MenuFiltros {
-	margin: 0 auto;
-	display: table;
-	h5, i {
-		display : inline-block;
-		text-align: center;
+	position        : relative;
+	display         : flex;
+	width           : 100%;
+	margin-bottom   : 0;
+	font-size       : 1.125em;
+	font-weight     : 600;
+	color           : $blue_light;
+	text-decoration : none;
+	transition      : all .25s ease;
+	align-items     : center;
+	justify-content : center;
+	&:hover {
+		text-decoration : none;
 	}
-	h5 {
-		margin-right  : 8px;
-		margin-bottom : 0;
-		color         : $blue_light;
-	}
-	.iconTriangleBase {
-		position     : relative;
-		top          : -2px;
-		height       : 0px;
-		width        : 0px;
-		cursor       : pointer;
-		border-style : solid;
-	}
-	.iconTriangleUp {
-		@extend .iconTriangleBase;
-		border-color : transparent transparent $blue_light transparent;
-		border-width : 0px 6px 6px 6px;
-		&:hover {
-			border-color : transparent transparent $oragen transparent;
-		}
-	}
-	.iconTriangleDown {
-		@extend .iconTriangleBase;
-		border-color : $blue_light transparent transparent transparent;;
-		border-width : 6px 6px 0 6px;
-		&:hover {
-			border-color : $oragen transparent transparent transparent;
-		}
-	}
-
-
+}
+.SliderFiltar {
+	margin-bottom    : 10px;
+	background-color : #fff;
+	transition       : all .25s ease;
 }
