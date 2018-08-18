@@ -1,59 +1,61 @@
-
 .Heading {
-	position : relative;
-	margin   : 10px 0;
-	color    : $blue_light !important;
-	i, p {
-		display : inline-block;
-	}
-	p {
-		margin-bottom : 0;
-		font-size     : 0.875em !important;
-		font-weight   : 600;
-	}
+  position: relative;
+  margin: 10px 0;
+  color: $blue_light !important;
+  i,
+  p {
+    display: inline-block;
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 0.875em !important;
+    font-weight: 600;
+  }
 }
+
 :global {
-	.iconSearch {
-		position     : relative;
-		display      : inline-block;
-		top          : 2px;
-		height       : 14px;
-		width        : 14px;
-		margin-right : 8px;
-		background: url(./assets/icons/filters/search.svg?fill=#{$blue_light});
-	}
-	.iconStar {
-		position     : relative;
-		display      : inline-block;
-		top          : 2px;
-		height       : 14px;
-		width        : 14px;
-		margin-right : 8px;
-		background: url(./assets/icons/filters/star.svg?fill=#{$blue_light});
-	}
-	.iconTriangleBase {
-		position     : absolute;
-		top          : 9px;
-		right        : 2px;
-		height       : 0px;
-		width        : 0px;
-		cursor       : pointer;
-		border-style : solid;
-	}
-	.iconTriangleUp {
-		@extend .iconTriangleBase;
-		border-color : transparent transparent $blue_light transparent;
-		border-width : 0px 6px 6px 6px;
-		&:hover {
-			border-color : transparent transparent $oragen transparent;
-		}
-	}
-	.iconTriangleDown {
-		@extend .iconTriangleBase;
-		border-color : $blue_light transparent transparent transparent;;
-		border-width : 6px 6px 0 6px;
-		&:hover {
-			border-color : transparent transparent $oragen transparent;
-		}
-	}
+  .iconSearch {
+    position: relative;
+    display: inline-block;
+    top: 2px;
+    height: 14px;
+    width: 14px;
+    margin-right: 8px;
+    background: url(./assets/icons/filters/search.svg?fill=#{$blue_light});
+  }
+  .iconStar {
+    position: relative;
+    display: inline-block;
+    top: 2px;
+    height: 14px;
+    width: 14px;
+    margin-right: 8px;
+    background: url(./assets/icons/filters/star.svg?fill=#{$blue_light});
+  }
+  .iconTriangleBase {
+    position: absolute;
+    top: 9px;
+    right: 2px;
+    height: 0px;
+    width: 0px;
+    cursor: pointer;
+    border-style: solid;
+  }
+  .iconTriangleUp {
+    @extend .iconTriangleBase;
+    border-color: transparent transparent $blue_light transparent;
+    border-width: 0px 6px 6px 6px;
+    &:hover {
+      border-color: transparent transparent $oragen transparent;
+    }
+  }
+  .iconTriangleDown {
+    @extend .iconTriangleBase;
+    border-color: $blue_light transparent transparent transparent;
+    ;
+    border-width: 6px 6px 0 6px;
+    &:hover {
+      border-color: transparent transparent $oragen transparent;
+    }
+  }
 }

@@ -1,82 +1,84 @@
-
 .Hotel {
-	min-height    : 175px;
-	margin-bottom : 16px;
+  min-height: 175px;
+  margin-bottom: 16px;
 }
+
 .imageHotel {
-	overflow : hidden;
-	height   : 175px;
-	width    : 270px;
-	@media (min-width: 720px) and (max-width: 991.98px)  {
-		margin-bottom    : 10px;
-		background-color : #eee;
-	}
-	@media (min-width: 320px) and (max-width: 720px)  {
-		width         : inherit;
-		margin-bottom : 10px;
-	}
-	img {
-		@media (min-width: 720px) and (max-width: 991.98px)  {
-			max-height : 170%;
-		}
-		@media (min-width: 320px) and (max-width: 720px)  {
-			max-height : 155%;
-		}
-	}
+  overflow: hidden;
+  height: 175px;
+  width: 270px;
+  @media (min-width: 720px) and (max-width: 991.98px) {
+    margin-bottom: 10px;
+    background-color: #eee;
+  }
+  @media (min-width: 320px) and (max-width: 720px) {
+    width: inherit;
+    margin-bottom: 10px;
+  }
+  img {
+    @media (min-width: 720px) and (max-width: 991.98px) {
+      max-height: 170%;
+    }
+    @media (min-width: 320px) and (max-width: 720px) {
+      max-height: 155%;
+    }
+  }
 }
+
 .Info {
-	h6 {
-		font-weight : 600;
-		color       : $blue_light;
-	}
-	@media (min-width: 320px) and (max-width: 991.98px) {
-		margin-bottom : 20px;
-	}
+  h6 {
+    font-weight: 600;
+    color: $blue_light;
+  }
+  @media (min-width: 320px) and (max-width: 991.98px) {
+    margin-bottom: 20px;
+  }
 }
+
 .Price {
-	position        : relative;
-	display         : grid;
-	padding         : 18px;
-	text-align      : center;
-	align-items     : center;
-	justify-content : center;
-	&:before {
-		content     : '';
-		position    : absolute;
-		display     : block;
-		left        : 0;
-		height      : 170px;
-		width       : 1px;
-		border-left : 1px dashed #ccc;
-	}
-	p {
-		margin-bottom : 4px;
-		font-size     : 0.8125em;
-		color         : $gray_dark;
-	}
-	h1 {
-		display         : flex;
-		font-weight     : 600;
-		color           : $oragen;
-		align-items     : center;
-		justify-content : center;
-		span {
-			margin-right : 4px;
-			font-size    : 0.625em;
-			font-weight  : 300;
-		}
-	}
-	@media (min-width: 320px) and (max-width: 991.98px)  {
-		padding : 20px 0;
-		.btn {
-			display : block !important;
-			width   : 100% !important;
-		}
-		&:before {
-			top        : 0;
-			height     : 1px;
-			width      : 100%;
-			border-top : 1px dashed #ccc;
-		}
-	}
+  position: relative;
+  display: grid;
+  padding: 18px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    height: 170px;
+    width: 1px;
+    border-left: 1px dashed #ccc;
+  }
+  p {
+    margin-bottom: 4px;
+    font-size: 0.8125em;
+    color: $gray_dark;
+  }
+  h1 {
+    display: flex;
+    font-weight: 600;
+    color: $oragen;
+    align-items: center;
+    justify-content: center;
+    span {
+      margin-right: 4px;
+      font-size: 0.625em;
+      font-weight: 300;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 991.98px) {
+    padding: 20px 0;
+    .btn {
+      display: block !important;
+      width: 100% !important;
+    }
+    &:before {
+      top: 0;
+      height: 1px;
+      width: 100%;
+      border-top: 1px dashed #ccc;
+    }
+  }
 }
