@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 import { Container, Row, Col } from "reactstrap";
 import classes from "./Home.scss";
 import Filtros from "./../../components/Filtros/Filtros.jsx";

@@ -4,10 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
+	mode: 'development',
 	entry: {
 		index: './src/index.jsx',
 		app: './src/app.jsx',
@@ -15,13 +15,16 @@ module.exports = {
 	},
 	watch: true,
 	output: {
-		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.join(__dirname, "dist"),
+		publicPath: '/',
+		filename: '[name].bundle.js'
 	},
 	devServer: {
 		contentBase: path.join(__dirname, 'dist'),
 		compress: true,
 		overlay: true,
+		hot: true,
+		watchContentBase: true,
 		stats: {
 			colors: true
 		},
@@ -170,7 +173,6 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
 			template: __dirname + '/src/index.html',
 			filename: 'index.html',
@@ -223,5 +225,7 @@ module.exports = {
       open: false,
       server: { baseDir: ['dist'] }
   	}),
+  	new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin()
   ]
 };
