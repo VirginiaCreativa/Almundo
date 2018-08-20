@@ -11,8 +11,17 @@ class Home extends Component {
   state = {
     filtramobile: false,
     filtrosearch: false,
-    filtrostars: false
+    filtrostars: false,
+    datas: []
   };
+
+  componentDidMount() {
+    axios.get("/api").then(res => {
+      const data = res.data;
+      console.log(res.data);
+      this.setState({ datas: data });
+    });
+  }
 
   toggleFiltrarHandler = () => {
     const doesShow = this.state.filtramobile;
@@ -45,7 +54,7 @@ class Home extends Component {
               />
             </Col>
             <Col md="8" sm="12">
-              <Hoteles data={Data} />
+              <Hoteles data={this.state.datas} />
             </Col>
           </Row>
         </Container>

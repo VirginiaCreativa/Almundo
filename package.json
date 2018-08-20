@@ -7,9 +7,10 @@
   "private": true,
   "scripts": {
     "start": "yarn run  --parallel watch:server watch:build",
-    "watch:build": "webpack --mode development --inline --progress --colors --watch --hot",
+    "watch:build": "webpack --mode development --inline --progress --colors --hot",
     "watch:server": "nodemon server.js",
-    "dev": "webpack --mode='development' --inline --progress --colors --watch --hot",
+    "server": "nodemon server.js",
+    "dev": "webpack && nodemon server.js --mode='development' --inline --progress --colors --watch --hot",
     "prod": "webpack --mode='production' --progress --colors --watch --hot",
     "stylelint": "stylelint 'src/style/*.scss' --fix",
     "lint": "eslint src 'src/**/*.jsx, src/*.jsx'  --fix"
@@ -48,6 +49,7 @@
     "browser-sync-webpack-plugin": "2.2.2",
     "browserslist": "^4.0.1",
     "clean-webpack-plugin": "^0.1.19",
+    "concurrently": "^3.6.1",
     "css-loader": "^1.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "17.0.0",

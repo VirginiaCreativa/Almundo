@@ -18,3 +18,4 @@
 6. Demoré porque SVG habia una problema, no se deja cambiar el color, solución webpack, ya aprendí. Si funciona.
 7. Valida Decoración de Search
 8. Antes hacer prueba en iconos de Anemities y repetir Star para que funcionar https://stackblitz.com/edit/iconsrepeat.
+8. Yo te confenso que lo hice mi primera vez con React(ya habia estudiado, pero todavia lo estoy estudiando) y Node.JS, lo aprendi dos días, hice mucho reforzar. Si lo funcionaba todo! estoy muy feliz, ay me encanta aprender nuevas cosas. Nunca me rindo!. :D
