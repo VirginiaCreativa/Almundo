@@ -12,15 +12,19 @@ class Home extends Component {
     filtramobile: false,
     filtrosearch: false,
     filtrostars: false,
-    datas: []
+    datas: [],
+    error: null
   };
 
   componentDidMount() {
-    axios.get("/api").then(res => {
-      const data = res.data;
-      console.log(res.data);
-      this.setState({ datas: data });
-    });
+    axios
+      .get("/api")
+      .then(res => {
+        const data = res.data;
+        console.log(res.data);
+        this.setState({ datas: data });
+      })
+      .catch(err => this.setState({ error: err }));
   }
 
   toggleFiltrarHandler = () => {
@@ -37,6 +41,9 @@ class Home extends Component {
     this.setState({ filtrostars: !doesShowS });
   };
   render() {
+    if (this.state.error) {
+      return <h1 style={{ textAlign: "center" }}>There wes an error</h1>;
+    }
     return (
       <div>
         <FiltrosMobile
